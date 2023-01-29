@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvAccountNameHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Name : "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name :" />
+
+    <TextView
+        android:id="@+id/tvAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvAccountNameHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yuvan Sankar Raja" />
+
+
+    <TextView
+        android:id="@+id/tvAccountNumberHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Account Number :"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountNameHeader"
+        tools:text="Account Number :" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvAccountNumberHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountName"
+        tools:text="4372251" />
+
+    <TextView
+        android:id="@+id/tvAccountBalanceHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Balance :"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountNumberHeader"
+        tools:text="Balance :" />
+
+    <TextView
+        android:id="@+id/tvAccountBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvAccountNumberHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber"
+        tools:text="3000 CAD" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
