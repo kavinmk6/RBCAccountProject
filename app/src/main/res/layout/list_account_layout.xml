@@ -67,14 +67,13 @@
 
         <TextView
             android:id="@+id/tvAccountBalanceHeader"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="4dp"
             android:text="Balance :"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constrainedWidth="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAccountNumberHeader"
             tools:text="Balance :" />
@@ -87,7 +86,7 @@
             android:layout_marginTop="4dp"
             android:textColor="@color/black"
             app:layout_constrainedWidth="true"
-            app:layout_constraintStart_toEndOf="@+id/tvAccountNumberHeader"
+            app:layout_constraintStart_toEndOf="@+id/tvAccountBalanceHeader"
             app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber"
             tools:text="3000 CAD" />
 
