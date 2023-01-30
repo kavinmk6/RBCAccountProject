@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvTransactionDescriptionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Description : "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Description :" />
+
+    <TextView
+        android:id="@+id/tvTransactionDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvTransactionDescriptionHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Walmart Purchase" />
+
+
+    <TextView
+        android:id="@+id/tvTransactionAmountHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Amount :"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionDescriptionHeader"
+        tools:text="Amount :" />
+
+    <TextView
+        android:id="@+id/tvTransactionAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvTransactionAmountHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionDescription"
+        tools:text="4372251" />
+
+    <TextView
+        android:id="@+id/tvTransactionDateHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Date :"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionAmountHeader"
+        tools:text="Date :" />
+
+    <TextView
+        android:id="@+id/tvTransactionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/tvTransactionAmountHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionAmount"
+        tools:text="27/06/2023" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

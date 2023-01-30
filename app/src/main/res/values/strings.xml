@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RBCAccountProject</string>
+    <string name="accounts_list">Accounts List</string>
 </resources>
