@@ -1,18 +1,22 @@
 package com.example.rbcaccountproject.Accountadapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rbcaccountproject.R;
 import com.rbc.rbcaccountlibrary.Transaction;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.MyViewHolder> {
@@ -51,12 +55,19 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
         public void bind(final Transaction item) {
             tvTransactionDescription.setText(item.getDescription());
-            tvTransactionAmount.setText(item.getAmount() +" CAD");
-            tvTransactionDate.setText(item.getAmount());
+            tvTransactionAmount.setText(item.getAmount() + " CAD");
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            String dateString = formatter.format(new Date(item.getDate().getTimeInMillis()));
+            tvTransactionDate.setText(dateString);
+            double amount = Double.parseDouble(item.getAmount());
+            if (amount > 0) {
+                tvTransactionAmount.setTextColor(ContextCompat.getColor(tvTransactionAmount.getContext(), R.color.teal_700));
+            } else {
+                tvTransactionAmount.setTextColor(Color.RED);
+            }
         }
     }
 
-    //Sorting list based on date descending order
     public void setTransactionListData(List<Transaction> accounts) {
         items = accounts;
         Collections.sort(items, (s1, s2) -> s2.getDate().compareTo(s1.getDate()));

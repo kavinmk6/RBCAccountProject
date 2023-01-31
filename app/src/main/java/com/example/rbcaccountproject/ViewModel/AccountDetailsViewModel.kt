@@ -11,7 +11,6 @@ class AccountDetailsViewModel() : ViewModel() {
     private val transactionLiveData = MutableLiveData<Resource<List<Transaction>>>()
 
     fun getTransactionList(accountNumber: String) {
-
         transactionLiveData.postValue(Resource.Loading(true))
         CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
 
@@ -40,7 +39,6 @@ class AccountDetailsViewModel() : ViewModel() {
         return transactionLiveData
     }
 
-    //
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         transactionLiveData.postValue(Resource.Loading(false))
         transactionLiveData.postValue(throwable.localizedMessage?.let { Resource.Error(it) })

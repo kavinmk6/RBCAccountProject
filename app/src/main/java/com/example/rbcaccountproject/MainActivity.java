@@ -27,9 +27,7 @@ public class MainActivity extends AppCompatActivity implements AccountAdapter.On
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         adapter = new AccountAdapter(accountList, this);
-
         accountList = AccountProvider.INSTANCE.getAccountsList();
-
         binding.recyclerAccounts.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerAccounts.setAdapter(adapter);
         adapter.setAccountListData(accountList);

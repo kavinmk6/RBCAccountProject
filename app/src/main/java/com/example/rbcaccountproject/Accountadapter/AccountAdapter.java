@@ -1,6 +1,5 @@
 package com.example.rbcaccountproject.Accountadapter;
 
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +41,6 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHo
         holder.bind(items.get(position), listener);
     }
 
-
     @Override
     public int getItemCount() {
         return items.size();
@@ -56,11 +54,9 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHo
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
             tvAccountName = (TextView) itemView.findViewById(R.id.tvAccountName);
             tvAccountNumber = (TextView) itemView.findViewById(R.id.tvAccountNumber);
             tvAccountBalance = (TextView) itemView.findViewById(R.id.tvAccountBalance);
-
         }
 
         public void bind(final Account item, final OnItemClickListener listener) {
@@ -80,33 +76,37 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHo
 
             switch (name) {
                 case "VISA":
-                    view.setTextColor(Color.GREEN);
+                    view.setTextColor(getColor(R.color.green, view));
                     break;
 
                 case "MASTERCARD":
-                    view.setTextColor(Color.RED);
+                    view.setTextColor(getColor(R.color.red, view));
                     break;
 
                 case "CHEQUING":
-                    view.setTextColor(Color.BLUE);
+                    view.setTextColor(getColor(R.color.blue, view));
                     break;
 
                 case "BUSINESS LOAN":
-                    view.setTextColor(ContextCompat.getColor(view.getContext(),R.color.yellow));
+                    view.setTextColor(getColor(R.color.yellow, view));
                     break;
 
                 case "PERSONAL LOAN":
-                    view.setTextColor(Color.DKGRAY);
+                    view.setTextColor(getColor(R.color.gray, view));
                     break;
 
                 case "CREDIT LINE":
-                    view.setTextColor(ContextCompat.getColor(view.getContext(),R.color.purple_200));
+                    view.setTextColor(getColor(R.color.purple_200, view));
                     break;
 
                 default:
-                    view.setTextColor(ContextCompat.getColor(view.getContext(),R.color.teal_700));
+                    view.setTextColor(getColor(R.color.teal_700, view));
 
             }
+        }
+
+        public int getColor(int color, View view) {
+            return ContextCompat.getColor(view.getContext(), color);
         }
     }
 

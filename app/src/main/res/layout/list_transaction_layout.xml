@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="12dp">
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp">
 
     <TextView
         android:id="@+id/tvTransactionDescriptionHeader"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
@@ -21,7 +22,7 @@
 
     <TextView
         android:id="@+id/tvTransactionDescription"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
@@ -51,11 +52,10 @@
         android:id="@+id/tvTransactionAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/black"
         app:layout_constrainedWidth="true"
-        app:layout_constraintStart_toEndOf="@+id/tvTransactionAmountHeader"
+        app:layout_constraintStart_toStartOf="@+id/tvTransactionDescription"
         app:layout_constraintTop_toBottomOf="@+id/tvTransactionDescription"
         tools:text="4372251" />
 
@@ -77,13 +77,11 @@
         android:id="@+id/tvTransactionDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/black"
         app:layout_constrainedWidth="true"
-        app:layout_constraintStart_toEndOf="@+id/tvTransactionAmountHeader"
+        app:layout_constraintStart_toStartOf="@+id/tvTransactionDescription"
         app:layout_constraintTop_toBottomOf="@+id/tvTransactionAmount"
         tools:text="27/06/2023" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

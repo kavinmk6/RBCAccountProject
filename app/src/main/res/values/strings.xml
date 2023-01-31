@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">RBCAccountProject</string>
-    <string name="accounts_list">Accounts List</string>
+    <string name="app_name">RBC Banking</string>
+    <string name="accounts_list"><u>Accounts</u></string>
 </resources>
