@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RBC Banking</string>
     <string name="accounts_list"><u>Accounts</u></string>
+    <string name="retry_fetching_transactions">Retry Fetching Transactions</string>
 </resources>

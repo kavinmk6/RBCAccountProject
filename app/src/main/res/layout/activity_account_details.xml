@@ -33,7 +33,7 @@
         android:id="@+id/btRetryApi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retry Fetching Transactions"
+        android:text="@string/retry_fetching_transactions"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:visibility="gone"
