@@ -4,7 +4,7 @@ When user selects any account from the recyclerview, it will redirect the user t
 
 To make the different API calls parallely, i have used viewmodel class 'AccountDetailsViewModel. I have used coroutines with async to do two API calls paralley and handled their sucess, error, progresbar laoding state by creating a simple Sealed class called Resource.
 
-I have not used the repsoitory class, because as we don't have any requirement to handle local and remote data storage. I have not used DI, because of the app needs to be simple as per the requirement.
+I have not used the repsoitory class, because as we don't have any requirement to handle local and remote data storage. I have not used DI, Room as per the apps requirement, that the app needs to be simple.
 
 NOTE: THE getTransactions Service call and getAdditionalCreditCardTransactions always throwing error on first time. So i have placed an button to retry the service call, so that we can display the transactions in recyclerview.
 While doing the API call, whenever an error occurs, i will display that errorMessage in a textview. -> Error handling
